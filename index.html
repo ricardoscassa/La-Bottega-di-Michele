@@ -3,160 +3,240 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#073c3d" />
-  <meta name="description" content="La Bottega di Michele — auténtica cocina italiana de autor en Palma de Mallorca. Pasta bio, producto fresco y tradición familiar desde 1918." />
-  <meta property="og:title" content="La Bottega di Michele | Palma de Mallorca" />
-  <meta property="og:description" content="Cocina italiana de autor, tradición familiar y producto fresco desde 1918." />
+  <meta name="theme-color" content="#12372f" />
+  <meta name="description" content="La Bottega di Michele — cocina italiana de autor en Palma de Mallorca. Tradición familiar desde 1918, producto fresco y platos preparados al momento." />
+  <meta property="og:title" content="La Bottega di Michele | Cocina italiana de autor en Palma" />
+  <meta property="og:description" content="De Pescara a Mallorca. Más de un siglo de tradición familiar, producto fresco y cocina italiana con alma." />
   <meta property="og:image" content="assets/images/terrace.jpg" />
-  <title>La Bottega di Michele | Cocina italiana en Palma</title>
+  <meta property="og:type" content="restaurant" />
+  <title>La Bottega di Michele | Palma de Mallorca</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Saltar al contenido</a>
+
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="La Bottega di Michele">
-      <span class="brand-kicker">Palma · Mallorca</span>
-      <span class="brand-name">La Bottega<br>di Michele</span>
+      <span class="brand-mark">LB</span>
+      <span class="brand-copy"><strong>La Bottega</strong><small>di Michele · Palma</small></span>
     </a>
-    <nav class="desktop-nav" aria-label="Main navigation">
-      <a href="#experience" data-i18n="nav.story">Historia</a>
+
+    <nav class="desktop-nav" aria-label="Navegación principal">
+      <a href="#heritage" data-i18n="nav.story">Historia</a>
       <a href="#menu" data-i18n="nav.menu">Carta</a>
       <a href="#gallery" data-i18n="nav.gallery">Galería</a>
       <a href="#visit" data-i18n="nav.visit">Visítanos</a>
     </nav>
+
     <div class="header-actions">
-      <button class="lang-switch" id="langSwitch" type="button" aria-label="Switch language">EN</button>
-      <button class="reserve-btn reserve-trigger" type="button" data-i18n="nav.reserve">Reservar</button>
-      <button class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mobileNav" aria-label="Open menu">
+      <button class="lang-switch" id="langSwitch" type="button" aria-label="Cambiar idioma">EN</button>
+      <button class="whatsapp-header reserve-trigger" type="button">
+        <img src="assets/images/whatsapp.svg" alt="" aria-hidden="true" />
+        <span data-i18n="nav.reserve">Reservar</span>
+      </button>
+      <button class="menu-toggle" id="menuToggle" type="button" aria-expanded="false" aria-controls="mobileNav" aria-label="Abrir menú">
         <span></span><span></span>
       </button>
     </div>
   </header>
 
   <nav class="mobile-nav" id="mobileNav" aria-hidden="true">
-    <a href="#experience" data-i18n="nav.story">Historia</a>
+    <a href="#heritage" data-i18n="nav.story">Historia</a>
     <a href="#menu" data-i18n="nav.menu">Carta</a>
     <a href="#gallery" data-i18n="nav.gallery">Galería</a>
     <a href="#visit" data-i18n="nav.visit">Visítanos</a>
-    <button class="reserve-trigger" data-i18n="nav.reserve">Reservar una mesa</button>
+    <button class="reserve-trigger mobile-wa-link" type="button">
+      <img src="assets/images/whatsapp.svg" alt="" aria-hidden="true" />
+      <span data-i18n="nav.reserveFull">Reservar por WhatsApp</span>
+    </button>
   </nav>
 
-  <main>
+  <main id="main">
     <section class="hero">
       <img class="hero-bg" src="assets/images/terrace.jpg" alt="Terraza de La Bottega di Michele en Palma" />
-      <div class="hero-overlay"></div>
+      <div class="hero-shade"></div>
       <div class="hero-content reveal">
-        <p class="eyebrow" data-i18n="hero.eyebrow">Cocina italiana de autor · desde 1918</p>
-        <h1 data-i18n="hero.title">Italia, servida<br><em>con alma.</em></h1>
-        <p class="hero-copy" data-i18n="hero.copy">Una mesa en Palma, una historia que empezó en Pescara y platos preparados al momento con producto fresco.</p>
-        <div class="hero-cta">
-          <button class="primary-btn reserve-trigger" data-i18n="hero.reserve">Reservar mesa</button>
-          <a class="ghost-btn" href="#menu" data-i18n="hero.menu">Descubrir la carta</a>
+        <p class="eyebrow light" data-i18n="hero.eyebrow">Pescara · Mallorca · Desde 1918</p>
+        <h1 data-i18n="hero.title">Cocina italiana<br><em>con memoria.</em></h1>
+        <p class="hero-copy" data-i18n="hero.copy">Cuatro generaciones, producto fresco y una cocina hecha al momento. Una historia italiana que hoy se sirve en Palma.</p>
+        <div class="hero-actions">
+          <button class="button button-wa reserve-trigger" type="button">
+            <img src="assets/images/whatsapp.svg" alt="" aria-hidden="true" />
+            <span data-i18n="hero.reserve">Reservar por WhatsApp</span>
+          </button>
+          <a class="button button-ghost" href="#menu" data-i18n="hero.menu">Ver la carta</a>
         </div>
       </div>
-      <div class="hero-meta reveal">
-        <div><span data-i18n="hero.today">Hoy</span><strong id="todayHours">13:00 — 22:00</strong></div>
-        <div><span data-i18n="hero.location">En el corazón de Palma</span><strong>C/ Fábrica, 17</strong></div>
+
+      <div class="hero-bottom reveal">
+        <div class="hero-fact"><span data-i18n="hero.today">Hoy</span><strong id="todayHours">13:00 — 22:00</strong></div>
+        <div class="hero-fact"><span data-i18n="hero.addressLabel">Santa Catalina · Palma</span><strong>Carrer de la Fàbrica, 17</strong></div>
+        <a class="hero-directions" href="https://maps.app.goo.gl/eV2x4zK1jKoQ8Tqt5" target="_blank" rel="noopener">
+          <span data-i18n="hero.directions">Abrir en Google Maps</span><b>↗</b>
+        </a>
       </div>
     </section>
 
-    <section class="signature-strip" aria-label="Highlights">
-      <div><span>108</span><small data-i18n="facts.years">años de tradición</small></div>
-      <div><span>1918</span><small data-i18n="facts.since">origen en Pescara</small></div>
-      <div><span>100%</span><small data-i18n="facts.fresh">hecho al momento</small></div>
+    <section class="heritage-ribbon" aria-label="La tradición de La Bottega">
+      <div><strong>1918</strong><span data-i18n="ribbon.origin">Pescara, Abruzzo</span></div>
+      <i></i>
+      <div><strong>4</strong><span data-i18n="ribbon.generations">generaciones</span></div>
+      <i></i>
+      <div><strong>1998</strong><span data-i18n="ribbon.mallorca">La Bottega en Mallorca</span></div>
+      <i></i>
+      <div><strong>2026</strong><span data-i18n="ribbon.today">la historia continúa</span></div>
     </section>
 
-    <section class="experience section" id="experience">
-      <div class="section-heading reveal">
-        <p class="eyebrow" data-i18n="story.eyebrow">La historia detrás de la mesa</p>
-        <h2 data-i18n="story.title">Una familia que cocina<br>desde hace cuatro generaciones.</h2>
+    <section class="heritage section" id="heritage">
+      <div class="heritage-intro reveal">
+        <p class="eyebrow" data-i18n="story.eyebrow">Más de un siglo alrededor de la mesa</p>
+        <h2 data-i18n="story.title">No es sólo una receta.<br><em>Es una herencia.</em></h2>
+        <p class="heritage-lead" data-i18n="story.lead">La historia de la familia Caporale empieza en 1918, cuando Nonna Graziela abre su primer restaurante en Pescara, Abruzzo. Desde entonces, cada generación ha añadido su carácter sin perder el origen.</p>
       </div>
-      <div class="story-grid">
-        <div class="story-copy reveal">
-          <p class="lead" data-i18n="story.lead">El legado gastronómico de la familia Caporale comenzó en 1918 en Pescara, Abruzzo. Michele continuó esa tradición y la llevó a Mallorca en 1998.</p>
-          <p data-i18n="story.body">Hoy, La Bottega mantiene la misma idea sencilla: producto de calidad, cocina hecha al momento y una hospitalidad cercana, como si cada cliente entrara en casa.</p>
-          <div class="quote" data-i18n="story.quote">“Bienvenido a casa.”</div>
+
+      <div class="heritage-layout">
+        <div class="heritage-collage reveal">
+          <figure class="heritage-main-photo">
+            <img src="assets/images/michele-manuel.jpg" alt="Michele y Manuel Caporale" />
+            <figcaption><span data-i18n="story.photoCaption">Michele & Manuel Caporale</span><b data-i18n="story.livingLegacy">Un legado que sigue vivo</b></figcaption>
+          </figure>
+          <figure class="heritage-small-photo first"><img src="assets/images/preparing-pasta.jpeg" alt="Preparación artesanal de pasta" /></figure>
+          <figure class="heritage-small-photo second"><img src="assets/images/serving-terrace.jpeg" alt="Servicio en La Bottega di Michele" /></figure>
+          <div class="heritage-stamp"><span>Dal</span><strong>1918</strong><small>Pescara · Palma</small></div>
         </div>
-        <div class="story-media reveal">
-          <img src="assets/images/michele-manuel.jpg" alt="Michele Caporale y Manuel Caporale" />
-          <div class="story-badge"><b>1918 → 2026</b><span data-i18n="story.badge">Tradición que sigue viva</span></div>
+
+        <div class="timeline reveal">
+          <article>
+            <span class="timeline-year">1918</span>
+            <div><h3 data-i18n="story.t1title">Todo empieza con Nonna Graziela</h3><p data-i18n="story.t1body">En Pescara, en la región de Abruzzo, abre el primer restaurante familiar. Una cocina basada en producto, oficio y hospitalidad.</p></div>
+          </article>
+          <article>
+            <span class="timeline-year" data-i18n="story.t2year">Después</span>
+            <div><h3 data-i18n="story.t2title">El oficio pasa de generación en generación</h3><p data-i18n="story.t2body">Nono Don Donato Simone continúa la actividad y, más tarde, Antonieta mantiene viva la tradición familiar.</p></div>
+          </article>
+          <article>
+            <span class="timeline-year">1978</span>
+            <div><h3 data-i18n="story.t3title">Michele recoge el legado</h3><p data-i18n="story.t3body">La tercera generación convierte la tradición en una cocina de autor: recetas reconocibles, creatividad y respeto absoluto por la materia prima.</p></div>
+          </article>
+          <article>
+            <span class="timeline-year">1998</span>
+            <div><h3 data-i18n="story.t4title">De Abruzzo a Mallorca</h3><p data-i18n="story.t4body">Michele lleva ese conocimiento a Palma y abre La Bottega di Michele, combinando raíces italianas con el producto mediterráneo de la isla.</p></div>
+          </article>
+          <article>
+            <span class="timeline-year" data-i18n="story.t5year">Hoy</span>
+            <div><h3 data-i18n="story.t5title">La historia continúa</h3><p data-i18n="story.t5body">Manuel Caporale representa la siguiente generación. La familia sigue evolucionando, pero la promesa permanece: cocinar al momento, cuidar el producto y hacer que cada cliente se sienta en casa.</p></div>
+          </article>
+        </div>
+      </div>
+
+      <div class="heritage-values reveal">
+        <blockquote data-i18n="story.quote">“Para crear platos extraordinarios, la materia prima también debe ser extraordinaria.”</blockquote>
+        <div class="value-grid">
+          <div><span>01</span><strong data-i18n="story.value1title">Producto</strong><p data-i18n="story.value1body">Fresco, de temporada y elegido por calidad.</p></div>
+          <div><span>02</span><strong data-i18n="story.value2title">Al momento</strong><p data-i18n="story.value2body">Cada plato se cocina cuando lo pides.</p></div>
+          <div><span>03</span><strong data-i18n="story.value3title">Emoción</strong><p data-i18n="story.value3body">Sabor, textura y recuerdos que permanecen.</p></div>
         </div>
       </div>
     </section>
 
-    <section class="featured section dark-section">
-      <div class="section-heading light reveal">
-        <p class="eyebrow" data-i18n="featured.eyebrow">Elige con los ojos</p>
-        <h2 data-i18n="featured.title">Algunos platos que merecen<br>ser el motivo de tu visita.</h2>
-      </div>
-      <div class="dish-carousel" id="dishCarousel">
-        <article class="dish-card reveal">
-          <img src="assets/images/lobster-pasta.jpg" alt="Spaghetti con bogavante" />
-          <div class="dish-card-body"><span class="dish-tag" data-i18n="featured.casserole">A la cazuela</span><h3>Spaghetti con Bogavante</h3><p data-i18n="featured.lobster">Bogavante, frutos del mar y el sabor intenso de la cazuela de barro.</p><strong>S.P.M.</strong></div>
-        </article>
-        <article class="dish-card reveal">
-          <img src="assets/images/pasta-fresca.jpg" alt="Pasta fresca italiana" />
-          <div class="dish-card-body"><span class="dish-tag" data-i18n="featured.pasta">Pasta bio</span><h3>Pappardelle alla Sophia Loren</h3><p data-i18n="featured.sophia">Gambas, setas, crema de tartufo blanco y parmesano.</p><strong>22€</strong></div>
-        </article>
-        <article class="dish-card reveal">
-          <img src="assets/images/parmesan-wheel.jpeg" alt="Tagliatelle en rueda de parmesano" />
-          <div class="dish-card-body"><span class="dish-tag" data-i18n="featured.ritual">El ritual</span><h3>Tagliatelle en rueda de Parmigiano</h3><p data-i18n="featured.parmesan">Parmigiano Reggiano de 30 meses, pimienta negra y aceite de trufa.</p><strong>22€</strong></div>
-        </article>
-        <article class="dish-card reveal">
-          <img src="assets/images/panna-cotta.jpg" alt="Panna cotta" />
-          <div class="dish-card-body"><span class="dish-tag" data-i18n="featured.dessert">Postre casero</span><h3>Panna Cotta</h3><p data-i18n="featured.panna">Flan italiano de nata y vainilla con frutos del bosque.</p><strong>7,50€</strong></div>
-        </article>
-      </div>
-      <div class="swipe-hint" data-i18n="featured.swipe">Desliza para descubrir →</div>
-    </section>
-
-    <section class="menu-section section" id="menu">
-      <div class="menu-top reveal">
+    <section class="visual-menu-section" id="menu">
+      <div class="section menu-heading reveal">
         <div>
-          <p class="eyebrow" data-i18n="menu.eyebrow">Carta 2026</p>
-          <h2 data-i18n="menu.title">La carta, hecha para elegir<br>sin prisas.</h2>
+          <p class="eyebrow light" data-i18n="menu.eyebrow">Carta 2026</p>
+          <h2 data-i18n="menu.title">Primero elegimos<br><em>con los ojos.</em></h2>
         </div>
-        <div class="menu-note" data-i18n="menu.note">Todos los precios incluyen IVA. Los platos de cazuela son para mínimo 2 personas. S.P.M. = según precio de mercado.</div>
+        <p data-i18n="menu.intro">La carta sigue siendo completa y fácil de leer, pero ahora las fotografías acompañan la elección sin convertir el menú en una imagen que haya que ampliar con los dedos.</p>
       </div>
 
-      <div class="menu-toolbar reveal">
-        <div class="category-tabs" id="categoryTabs"></div>
-        <label class="menu-search">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="m21 21-4.6-4.6m2.1-5.4a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg>
-          <input id="menuSearch" type="search" placeholder="Buscar un plato" data-i18n-placeholder="menu.search" />
-        </label>
+      <div class="visual-category-rail" id="visualCategoryRail" aria-label="Categorías de la carta"></div>
+
+      <div class="signature-dishes section reveal">
+        <div class="signature-title">
+          <span data-i18n="menu.signaturesKicker">Sugerencias de Michele</span>
+          <h3 data-i18n="menu.signaturesTitle">Platos que cuentan la casa</h3>
+        </div>
+        <div class="signature-grid">
+          <article class="signature-card large">
+            <img src="assets/images/lobster-pasta.jpg" alt="Spaghetti con bogavante" />
+            <div><span data-i18n="menu.casserole">A la cazuela</span><h4>Spaghetti con Bogavante</h4><p data-i18n="featured.lobster">Preparado en cazuela de barro, para compartir y disfrutar sin prisa.</p><b>S.P.M.</b></div>
+          </article>
+          <article class="signature-card">
+            <img src="assets/images/parmesan-wheel.jpeg" alt="Tagliatelle en rueda de Parmigiano Reggiano" />
+            <div><span data-i18n="menu.pasta">Pasta</span><h4>Tagliatelle · Parmigiano 30 meses</h4><b>22€</b></div>
+          </article>
+          <article class="signature-card">
+            <img src="assets/images/panna-cotta.jpg" alt="Panna Cotta" />
+            <div><span data-i18n="menu.desserts">Postres</span><h4>Panna Cotta</h4><b>7,50€</b></div>
+          </article>
+        </div>
       </div>
-      <div class="menu-list" id="menuList"></div>
-      <div class="menu-footer-note" data-i18n="menu.allergens">¿Alergias o intolerancias? Pregunta a nuestro equipo antes de pedir.</div>
+
+      <div class="menu-reader section">
+        <div class="menu-reader-head reveal">
+          <div>
+            <p class="eyebrow" data-i18n="menu.fullKicker">La carta completa</p>
+            <h3 data-i18n="menu.fullTitle">Explora a tu manera.</h3>
+          </div>
+          <label class="menu-search">
+            <span aria-hidden="true">⌕</span>
+            <input id="menuSearch" type="search" placeholder="Buscar un plato" data-i18n-placeholder="menu.search" />
+          </label>
+        </div>
+        <div class="category-tabs" id="categoryTabs"></div>
+        <div class="menu-list" id="menuList"></div>
+        <div class="menu-notes">
+          <p data-i18n="menu.note">Todos los precios incluyen IVA. Los platos de cazuela son para mínimo 2 personas. S.P.M. = según precio de mercado.</p>
+          <p data-i18n="menu.allergens">¿Alergias o intolerancias? Pregunta a nuestro equipo antes de pedir.</p>
+        </div>
+      </div>
     </section>
 
     <section class="gallery section" id="gallery">
       <div class="section-heading reveal">
         <p class="eyebrow" data-i18n="gallery.eyebrow">La experiencia</p>
-        <h2 data-i18n="gallery.title">Un rincón de Italia<br>en Santa Catalina.</h2>
+        <h2 data-i18n="gallery.title">La mesa, la cocina,<br><em>la gente.</em></h2>
       </div>
       <div class="gallery-grid">
-        <button class="gallery-item tall reveal" data-img="assets/images/serving-terrace.jpeg"><img src="assets/images/serving-terrace.jpeg" alt="Servicio en la terraza" /></button>
-        <button class="gallery-item reveal" data-img="assets/images/wine-toast.jpg"><img src="assets/images/wine-toast.jpg" alt="Brindis en La Bottega" /></button>
-        <button class="gallery-item reveal" data-img="assets/images/interior.jpg"><img src="assets/images/interior.jpg" alt="Interior del restaurante" /></button>
-        <button class="gallery-item wide reveal" data-img="assets/images/preparing-pasta.jpeg"><img src="assets/images/preparing-pasta.jpeg" alt="Preparando pasta" /></button>
-        <button class="gallery-item reveal" data-img="assets/images/fish.jpg"><img src="assets/images/fish.jpg" alt="Pescado preparado en La Bottega" /></button>
-        <button class="gallery-item reveal" data-img="assets/images/meat.jpg"><img src="assets/images/meat.jpg" alt="Carne a la brasa" /></button>
+        <button class="gallery-item tall reveal" data-img="assets/images/serving-terrace.jpeg"><img src="assets/images/serving-terrace.jpeg" alt="Servicio personalizado en la terraza" /><span data-i18n="gallery.service">Servicio cercano</span></button>
+        <button class="gallery-item reveal" data-img="assets/images/interior.jpg"><img src="assets/images/interior.jpg" alt="Interior del restaurante" /><span data-i18n="gallery.home">Como en casa</span></button>
+        <button class="gallery-item reveal" data-img="assets/images/wine-toast.jpg"><img src="assets/images/wine-toast.jpg" alt="Brindis en La Bottega" /><span data-i18n="gallery.moments">Momentos</span></button>
+        <button class="gallery-item wide reveal" data-img="assets/images/preparing-pasta.jpeg"><img src="assets/images/preparing-pasta.jpeg" alt="Preparando pasta italiana" /><span data-i18n="gallery.craft">Hecho al momento</span></button>
+        <button class="gallery-item reveal" data-img="assets/images/fish.jpg"><img src="assets/images/fish.jpg" alt="Pescado fresco" /><span data-i18n="gallery.product">Producto</span></button>
+        <button class="gallery-item reveal" data-img="assets/images/meat.jpg"><img src="assets/images/meat.jpg" alt="Plato de carne" /><span data-i18n="gallery.cuisine">Cocina de autor</span></button>
       </div>
     </section>
 
-    <section class="visit section dark-section" id="visit">
-      <div class="visit-grid">
-        <div class="visit-copy reveal">
-          <p class="eyebrow" data-i18n="visit.eyebrow">Ven a vernos</p>
-          <h2 data-i18n="visit.title">Tu mesa está en<br>Palma.</h2>
-          <address>Carrer de la Fàbrica, 17<br>07013 Palma, Illes Balears</address>
-          <div class="visit-actions">
-            <a class="primary-btn light-btn" href="https://www.google.com/maps/search/?api=1&query=Carrer+de+la+Fabrica+17+07013+Palma+Mallorca" target="_blank" rel="noopener" data-i18n="visit.directions">Cómo llegar</a>
-            <a class="ghost-btn light-ghost" href="tel:+34971454892">+34 971 454 892</a>
+    <section class="booking-banner section">
+      <div class="booking-banner-inner reveal">
+        <div>
+          <p class="eyebrow light" data-i18n="booking.kicker">Tu próxima mesa</p>
+          <h2 data-i18n="booking.title">Una reserva.<br><em>Un mensaje.</em></h2>
+          <p data-i18n="booking.body">Elige fecha, hora y número de personas. Preparamos el mensaje y WhatsApp se abre listo para enviar. La reserva queda sujeta a confirmación del restaurante.</p>
+        </div>
+        <button class="button button-wa big reserve-trigger" type="button">
+          <img src="assets/images/whatsapp.svg" alt="WhatsApp" />
+          <span><b data-i18n="booking.button">Reservar por WhatsApp</b><small>+34 971 454 892</small></span>
+        </button>
+      </div>
+    </section>
+
+    <section class="visit section" id="visit">
+      <div class="visit-card reveal">
+        <div class="visit-photo"><img src="assets/images/terrace.jpg" alt="Terraza de La Bottega di Michele" /></div>
+        <div class="visit-content">
+          <p class="eyebrow" data-i18n="visit.eyebrow">Santa Catalina · Palma</p>
+          <h2 data-i18n="visit.title">Ven a<br><em>La Bottega.</em></h2>
+          <address>Carrer de la Fàbrica, 17<br />07013 Palma, Illes Balears</address>
+          <div class="visit-buttons">
+            <a class="button button-dark" href="https://maps.app.goo.gl/eV2x4zK1jKoQ8Tqt5" target="_blank" rel="noopener"><span data-i18n="visit.directions">Abrir restaurante en Maps</span> ↗</a>
+            <a class="text-link" href="tel:+34971454892">+34 971 454 892</a>
           </div>
         </div>
-        <div class="hours-card reveal">
-          <div class="hours-head"><span data-i18n="hours.title">Horario de cocina</span><span class="open-dot"></span></div>
+        <div class="hours-card">
+          <div class="hours-title"><span data-i18n="hours.title">Horario de cocina</span><i></i></div>
           <div class="hours-row"><span data-i18n="hours.monTue">Lunes — Martes</span><strong>13:00 — 22:00</strong></div>
           <div class="hours-row closed"><span data-i18n="hours.wed">Miércoles</span><strong data-i18n="hours.closed">Cerrado</strong></div>
           <div class="hours-row"><span data-i18n="hours.thuSat">Jueves — Sábado</span><strong>13:00 — 22:00</strong></div>
@@ -167,37 +247,54 @@
     </section>
   </main>
 
-  <footer>
-    <div class="footer-brand"><span>La Bottega</span><small>di Michele · Palma</small></div>
-    <div class="footer-links"><a href="#menu" data-i18n="nav.menu">Carta</a><button class="reserve-trigger" data-i18n="nav.reserve">Reservas</button><a href="tel:+34971454892">+34 971 454 892</a></div>
-    <p>© 2026 La Bottega di Michele</p>
+  <footer class="site-footer">
+    <div class="footer-main">
+      <div class="footer-brand"><strong>La Bottega</strong><span>di Michele</span><small data-i18n="footer.tagline">Una familia de restauradores desde 1918.</small></div>
+      <div class="footer-nav"><a href="#heritage" data-i18n="nav.story">Historia</a><a href="#menu" data-i18n="nav.menu">Carta</a><button class="reserve-trigger" type="button" data-i18n="nav.reserve">Reservar</button><a href="#visit" data-i18n="nav.visit">Visítanos</a></div>
+      <div class="socials" aria-label="Redes sociales">
+        <a href="https://www.instagram.com/labottega.dimichele/" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.25"/><circle cx="17.5" cy="6.5" r="1" class="fill-dot"/></svg>
+        </a>
+        <a href="http://www.facebook.com/pages/La-Bottega-de-Michele/155160061192254" target="_blank" rel="noopener" aria-label="Facebook">
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 8H17V4.5h-2.7c-3.1 0-4.8 1.8-4.8 5v2H7v3.5h2.5V21h4v-6H17l.5-3.5h-4V9.7c0-1.1.3-1.7 1-1.7Z"/></svg>
+        </a>
+        <button class="reserve-trigger social-wa" type="button" aria-label="WhatsApp"><img src="assets/images/whatsapp.svg" alt="" /></button>
+      </div>
+    </div>
+    <div class="footer-bottom"><span>© 2026 La Bottega di Michele</span><a href="https://maps.app.goo.gl/eV2x4zK1jKoQ8Tqt5" target="_blank" rel="noopener">Carrer de la Fàbrica, 17 · Palma</a></div>
   </footer>
 
-  <div class="mobile-action-bar" aria-label="Quick actions">
-    <a href="#menu"><svg viewBox="0 0 24 24"><path d="M6 3v7m3-7v7M7.5 10v11M15 3v18m0-11c4-1 4-7 0-7" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span data-i18n="mobile.menu">Carta</span></a>
-    <button class="reserve-trigger main-action"><svg viewBox="0 0 24 24"><path d="M7 3v3m10-3v3M4 9h16M5 5h14a1 1 0 0 1 1 1v14H4V6a1 1 0 0 1 1-1Z" fill="none" stroke="currentColor" stroke-width="1.7"/></svg><span data-i18n="mobile.reserve">Reservar</span></button>
-    <a href="tel:+34971454892"><svg viewBox="0 0 24 24"><path d="M7.2 3.8 4.8 6.2c-.8.8.7 4.1 3.7 7.1s6.3 4.5 7.1 3.7l2.4-2.4-3.2-2.1-1.7 1.4c-1.3-.6-2.5-1.5-3.5-2.5s-1.9-2.2-2.5-3.5l1.4-1.7-1.3-2.4Z" fill="none" stroke="currentColor" stroke-width="1.7" stroke-linecap="round"/></svg><span data-i18n="mobile.call">Llamar</span></a>
+  <button class="floating-whatsapp reserve-trigger" type="button" aria-label="Reservar por WhatsApp">
+    <img src="assets/images/whatsapp.svg" alt="WhatsApp" />
+    <span data-i18n="floating.whatsapp">Reservar por WhatsApp</span>
+  </button>
+
+  <div class="mobile-action-bar" aria-label="Acciones rápidas">
+    <a href="#menu"><span class="action-icon">☰</span><small data-i18n="mobile.menu">Carta</small></a>
+    <button class="reserve-trigger mobile-wa-action" type="button"><span class="wa-circle"><img src="assets/images/whatsapp.svg" alt="WhatsApp" /></span><small>WhatsApp</small></button>
+    <a href="https://maps.app.goo.gl/eV2x4zK1jKoQ8Tqt5" target="_blank" rel="noopener"><span class="action-icon">⌖</span><small data-i18n="mobile.directions">Cómo llegar</small></a>
   </div>
 
   <div class="modal" id="reservationModal" role="dialog" aria-modal="true" aria-labelledby="reservationTitle" aria-hidden="true">
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-card">
-      <button class="modal-close" type="button" data-close-modal aria-label="Close">×</button>
-      <p class="eyebrow" data-i18n="reserve.eyebrow">Reserva fácil</p>
-      <h2 id="reservationTitle" data-i18n="reserve.title">Prepara tu reserva<br>en segundos.</h2>
-      <p data-i18n="reserve.copy">Completa los datos y te llevamos a WhatsApp con el mensaje preparado. El restaurante confirmará disponibilidad.</p>
+      <button class="modal-close" type="button" data-close-modal aria-label="Cerrar">×</button>
+      <div class="modal-wa-mark"><img src="assets/images/whatsapp.svg" alt="WhatsApp" /></div>
+      <p class="eyebrow" data-i18n="reserve.eyebrow">Reserva por WhatsApp</p>
+      <h2 id="reservationTitle" data-i18n="reserve.title">Tu mesa,<br><em>en segundos.</em></h2>
+      <p class="modal-copy" data-i18n="reserve.copy">Completa los datos y abriremos WhatsApp con tu solicitud preparada. El restaurante confirmará la disponibilidad.</p>
       <form id="reservationForm">
-        <div class="form-row"><label><span data-i18n="reserve.name">Nombre</span><input id="resName" required autocomplete="name"></label><label><span data-i18n="reserve.people">Personas</span><select id="resPeople" required><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option value="7+">7+</option></select></label></div>
-        <div class="form-row"><label><span data-i18n="reserve.date">Fecha</span><input id="resDate" type="date" required></label><label><span data-i18n="reserve.time">Hora</span><input id="resTime" type="time" min="13:00" max="22:00" step="900" required></label></div>
-        <label><span data-i18n="reserve.note">Nota opcional</span><textarea id="resNote" rows="2" data-i18n-placeholder="reserve.notePlaceholder" placeholder="Alergias, terraza, celebración..."></textarea></label>
-        <button class="primary-btn full" type="submit" data-i18n="reserve.whatsapp">Continuar por WhatsApp</button>
-        <a class="phone-fallback" href="tel:+34971454892" data-i18n="reserve.phone">O llamar al +34 971 454 892</a>
+        <div class="form-row"><label><span data-i18n="reserve.name">Nombre</span><input id="resName" required autocomplete="name" /></label><label><span data-i18n="reserve.people">Personas</span><select id="resPeople" required><option>1</option><option selected>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option value="7+">7+</option></select></label></div>
+        <div class="form-row"><label><span data-i18n="reserve.date">Fecha</span><input id="resDate" type="date" required /></label><label><span data-i18n="reserve.time">Hora</span><input id="resTime" type="time" min="13:00" max="22:00" step="900" required /></label></div>
+        <label><span data-i18n="reserve.note">Nota opcional</span><textarea id="resNote" rows="2" data-i18n-placeholder="reserve.notePlaceholder" placeholder="Terraza, alergias, celebración..."></textarea></label>
+        <button class="button button-wa full" type="submit"><img src="assets/images/whatsapp.svg" alt="" /><span data-i18n="reserve.whatsapp">Abrir WhatsApp</span></button>
+        <p class="reserve-disclaimer" data-i18n="reserve.disclaimer">Esta solicitud no confirma automáticamente la mesa. Espera la respuesta del restaurante.</p>
+        <a class="phone-fallback" href="tel:+34971454892" data-i18n="reserve.phone">Prefiero llamar: +34 971 454 892</a>
       </form>
     </div>
   </div>
 
-  <div class="lightbox" id="lightbox" aria-hidden="true"><button aria-label="Close" id="lightboxClose">×</button><img id="lightboxImg" alt="Gallery preview"></div>
-
+  <div class="lightbox" id="lightbox" aria-hidden="true"><button aria-label="Cerrar" id="lightboxClose">×</button><img id="lightboxImg" alt="Vista ampliada de la galería" /></div>
   <script src="script.js"></script>
 </body>
 </html>
