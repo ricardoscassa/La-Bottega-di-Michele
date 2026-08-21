@@ -1,0 +1,417 @@
+/*
+  La Bottega di Michele — refinement layer
+  Desktop hero, original brand logo and a cleaner mobile menu experience.
+*/
+:root {
+  --bottega-logo: url("data:image/webp;base64,UklGRmwXAABXRUJQVlA4WAoAAAAQAAAAiQAAiQAAQUxQSKwCAAABkATbtmk7+77Ytm3btm3btm3btp20bNv2t//Dzfu7Fe2z9m+mImIC6P9ZY8VLmDhJ4kQJ4jgUsxypGy2/FxzFv3R9PT60aDxLoYYnvkXy37SDn87MpEnyKbdt/qffDtbTIUbb8ywxZGE+eClHe1nsjTIWsnjLWLZfCQesBTaL/5ITUzsfNvJ0AjzJTrKpzu5oGrHJ55IgcWxlwwviiPWJjR+IIlsIA9yJoSpjPI+gEaO8E9u42ozzYSzDikcB4atmZbQZ6imTUjgZ7CpzrKcMt4UxmxlwBkM6M+KQmEY4IiDxIiPuMugKBtRm1G/kxY+CxdPEjWTcYdJSM/JDwpZDs+OLSsDY14taBY6TS/JD10tQe0YfIegVPK4qJo4H31YxfRm/U8xXBbiWkOSs4S4hZVR4JWSxCizER4d6IpKwjltFFFPihYhmSvhbEsYqEeGQsEMJb1wJ15Tg7BI+aFFRQogWLSV4tegpgbUcHI0YFo0YJMHWoruEIC2aSnirRVkJF7TIKGGDEj9jSxiqRLgloYESviIKKPGQJMZXYoUIeqtDORkTVfCQzEIqPBKSWIU1QuiZBiWlNFcggKQ6nPiWiKG7+IrLqQzvEwn+iK6ppInoEkgiJ7bxJHo8tMjYsuJAm03C2wPzJekx/XF1FUe5o1BdJQOPo8pmAv3A1JOMLAHpBhk6EZA7gSl0Bo63KBkbxwfNUDI4sRvLMjI6tRPJcjI8nxvHVjK+UBiKHQQwUwiGLQQxng+CEQQy1mnzyhHO3oY9S0dIC700aS6hXe015X1JwpvqlRGeiQTZqhwp70g8Qh2zUbCsPRkSessbYuzFWQh+vu0+Em4NJCVLnwjw/ovIt+PikKYJ21yy/47P0gIW6RszWdbKw7df/xBiMzt9np5e2LZw2vj0n6xWUDggmhQAABBNAJ0BKooAigA+GQqEQSEFPx9SBABhLEASoH9A/CvvepO9t/qX7G/kt8qlSfo34X/qu+50N5jnI3+p/LT/O+97/X+wD83/8L3AP01/0/9Z/wH+o+KP+39RX7aeoD+ef3b/n/4n3Yv9p6if7F+2/uAfzn+vekz7CX96/1XsAfzb/Zf//2bv9v+yHwN/tZ/5/+T8Av85/t3/T/Pf5APQA/8PqAdgx/Gvol8av6d+RH7ceuf4d8p/Ufx9/sf/k3zH+W8hn16+x/lN+VXwr/nPAn38fw/5AfAF+K/yX+u/lf/af3G+Yrzj/Vdvjj/9u/2HqBeq3zD/If4L9zv7z6CH8B+UfuT9cf7z7gX8g/lf91/sv7b/4X/7+71/jPEi+uf3D/Of274AP5D/Ov7p/fP2r/w///+0/97/2/+P/dL/a+zv8t/sH+n/v/7tf4H/////9A/4x/K/7//bP8j/uP7n//f+L9w3sT/Yz2J/1J+f9p1m7USiT5TayPnALUIIjAfbLOsrCnigd/TevHftV49YqZRaLGPZe2s+5gUjCMeu2EWLC96MAo7xvnrXwt9jHtne6fOJFCKrSvSZilKmQf8NxpiaN/AlgplVp/YJ/1c6eJs/tSP/lk6lfIHToPQH/OSpmlzKexmvjVhpUNbt5QALcM8T2DZZ8rK9Rk1N9i4EkaDE2TakHbaHt2JTmKDV8I3Xj9+mogJ6s+vQxQFn6hBW/X0zeVkp2dVFc3e82zkhrDn9v2fG5f2VHMCMv/VptOeDs25Kc2x9xfol6D2xe7kvOXUxf6HB96XNJlTJePJyNdwl326H/E9kViILVrN3w2RJ4AAA/v/JnIIq4qyrh074glkumn6Q19Jtfv/kRa+C8brklbTqeQcEAav6AzzQb9hrONfDpijF1TvSFTBwnADiEL9IW5kMp+QwdEQX0OxPjU8Wamn07AWijfAPnfwGRvcW/aiQ7phFJ9cvSW7bRoNvIziwODrfnJG2G1M5dHFe64l5U1je2GywTBcdkh9d3T2MsBn+z7Tqa0Sm8X/1+WbCv5VVoTCtv79T3+AhjuyWuBAx1EVZcJYPEsHu+PS7dZzc2jtFbkMvbYVjSB6s68oIHvfS5IC+5EKGwuz8BzENwMcs2/QUoS/LzCbhqShTbMz5NBy6Nj8ITxeseCrJDl5+OWHAvjdUJPEQFjQLPHduwm9dWU1/Z5nK9eBcAs848NxbQlgg5GuAi6nZUPRUlUijhlWwweduNbCKG6Uc3jTu9ObgleJs/lGDQhH5FH2OTInqhtNlrMV8ABkdaqZuG/e3VXF/wzXKk4+ahSKzh3BJzjt/c3oumSz4Xn9u9ipuoDawNfErR9WD25EAfU/MYNlunEE8+j+AMD/ftCfNjjZkLjD+kJt2dWTMmDRG2TtHU8GCqsBO5L0PvRGAhrl533RmPaLKQcYBhEbCgPgZ856WoK1qL3T0gd34+nLPkEatDOQZzMmm1kJpbKaWk4TWOHjeo8rm3TbX4CMQQGRHc6eLiGGUPMh1lLFU/TGmxsr8WxqctFxa3YlTX0V1bkO0rhW5fs1WP8wTs/f4jFMwEWewh03AZ/0Bnh+EgmwNLuQ3gDCLts9/7JGL9A1k2WWcRbs1YTVzn7dIGOy1TPWAQ+6BJNlsMJTr+0qhlhlUo2XrJ3JUANwnG6OYfPk1tbJmYGCNbVq6VRk5pHIHF75PpWn880mkbn8rJqbPsqMl2fVIb+Cp8u7zC/kYQWJEUFa1lYPgRHCQcy8Bh15av/+cZ9nP8/5f1taO+cwTA/nCluD0qNJP/LcMCaFO3EUkwHI1hP1FZ8LcG3UFMp7IvSRhOVFP/s9lmaGNwZv4J/w/O/SI54p2ZXf7lmTn0Ev9sLIdY6sumDrifRIItk+JkQ+wD3HVY/5txvKfmaY22F1fyzJnQW8fRC8dGfmxrbr2ROu3iYQFtbDr73L4J3dRFG1Xwda9fa61B8eE1U7CPn7UDG+qRe4XzqZPpLX3Xscphrph53/vBfFLFzF9QN/5gKjkfMe/DfNq+uczrXBtUgVgKXwgyiKlWU1YoFa0RHJVpDn0kGr1+lb6ve5IqjH9MeRhA2wIs8yTwobGK/vNIt5bFIeEx9RsJRxDklCGYNM1uy9NRQ3Io4CtniAHLsASzRhAf810AoJXNTP4SmQ+ozzB+agg51reHRWs2TDMdlK8OYZI4jXI+Kd2H2JZEJFCxogdFPmowWKrWNIaBLUxWU9BpbC3vzAFNv0CMgFFKHFRcUNEPPMTBksdup99JHNb6uzrXpst4nS4jrBSIjFJJS+rnmwVIdWxfbmdEdHu2cIQtV7AE382d+pucq4y2bj9F69qX75sOaX4XhQywzrXXVvwu3+9R3PhPNZWd5h97R6XCnPi93+2DQ/Fe1axnWvA1Umek78ZNX3h73iw4LThin0jpoDP8svEc4J0ay2juW3cTbbbVOA8EXZzRlmvYLrwTq2eEWIvgL8ygZLzaYlqm4aaNfOAEsJNALPE0ai51h09RBbSekXUildDJ7f6Q020SU+MCVl1vzJLnt54evgnl6L6Snfg72CzAlMrTUTfOunwDFC8JXrvoEFCoaV5NJJW1d9+ys71yBtgm5uXMREPe3gP7rKgQwtAyXsyAqDsmT30LiOxiVMX4nNfOwab6bab2SnpVaOn8okvXPPV2cLJRCgoFnzX+h6lnL7GupSUFIpNDmE7JcAkOSm6BALAEKdNzcGT6aoqLDcYqc7sku3jJULbetR2EJiSRjK1z05Ak/chvmJ9SZEeirljRIgD+KZCM6RYFvramHVMHXO6VUawpp+VG0xuZcRqyC2E91mq3LH/VqfMBkee9fS2WJ1XALUa7X+b432z1G649oH3eNAdpALKVU5wlFOrer9PWVhS1SkOUOBMJD2gXg3KXCCmwplLvZCpkIsnipS5FgdORaQXHaEXJmFqpZD7MhPuts2J9MO73oKPl77VdN87OVmd8BGEywmmL/mdjXFDa8inUpwClfA/SJ7Cue90NGv8rU7JaEAkXB28aC42oxkwhpmOI914dqHwrKGjRGd4KIIa0sIvoWPiIax/ROVl0uTYXo9yP1hj8bVMl+3UxVVOI5f/B98xXSkPPisnm+ATdBfHI7GVqct4cs/SnctgPpyhnzTEUx1yKiwqfPKhyIaY3LUy9OMJHzkHUMYeZXE5MQGCdEGacs8wplgBWOkVSiey1+XKtvXOwds9uFSr/uxbn7br6vdzUEfX9uPuG4KM9NKmqavW6NOBYZCjaB+ZDmSxbb0BapM0h78qS59gLlxA0+zqOqRC5PeyEVseLeRoiPXK+4n/JvffqlHlwTwxRSHPLeQM1tqzht7H9BjRFdlEauTby3qj1u3kAEyRzw+wJ25TX1jBL75xiN+qhedUO5svPu+ILBNkHgs4kdDAEqlqT7w0ymawkX+o7VSuoH7A52ag8A6Pk/PqGH6jqwmm+4S/IcJL9MAlD9+fKsfyIN2cYH+gt04V9I6Rcj+S7oGLpAZLsBbktvCldRnAuX8qhXWv2QLZ/yK9Mq5Kl6Le5XyB4NIYQmA/Lb1+NFvHCNZRAX7T3apOG3jr7i5NWY/v3j5bsWP7FIvmBYcFEhw47LTurqJMC+L1HhAhSio3F3Gt84KAc5DiZNvpkw5cmsKOC11HauRdS9q3KVCws0Y2Q6iUiQK1GBNHzQWLd5JjcSNHxXkdap9OzXJIcEx0l1SWwmKMeE0mPzSm/xQsJFdKhFsdjyCy+gSKKQR2lHfDxO3uFJ9K/VqjWWZnjZ0GF/9g5fiH86W6MajzrtsrCInao/mIxVjhy1RhS3FUEg3NX660oie2Vl1HfzkrDb98f62PfZPobiKePdZg+uWjyjK8etCICOSru6uYOoFUfP6nlwlXPC6riI+ZY/ITs9jLoNMORR9WdJppPmOvwMgMtINw1gQPBrad1d6XTNlFetfbaH9eBNXOIjZusfZihkOIanDvtK75GUlQQr2MwCO7R782kTPQ/rr69UGE2sD5NsC7BI5ANagwwDCUWZYlcf+T49I4MVxAGRiexA+HuqSIaHDKusyntqovYweyGEnDjcokmEYekERgElZUYXww3g35zikcD6RORtl4ixETMVXedqEo5fui+Fi6L55Yltfz8BWk5LZK0ApzCDDG+FlFlkwH/3L+9E9Bm+F6aMgpI/e31HcWlyctWJh0EZHrxccDEVDaasDQkpRgZTlHcdPlu8qaj9f8n9mG4M4XnMycmlbGUmtpgkbbZMeNFagCvhs4xCWmNW451YEZCtf1iei+/q2xHouTdfwSBgOLM0t/9DYFQj/Qc2cYxe50VrHFeySP+wAV8v3sb2wculqpY4rkvxVEhFPLWcooZTUBqpTcmFZ42nMK/WYzqejqv4+v+btmeAB4wKqNuu0rbl4RsAZ2WWgvrU0Xj0JeZkYSa1hWpiYKKy5CoGZwH8g/z2pyxr5CHgL7nEodHZQrZ2f1bUu5xn4t7zzfpsNndp3+rXZYSQUj48VcfLF9XA59/AIYrE/nExRIdWSGoiPFhvQ3GxsSAEvJ5AckWmtj+c2fjPVYXVRPlmjrUzdqd4RUQ7Ul4Z01xIVtyLigBMfPRNS7L7CJhHrs2QaE2MSuv6DHWCgW1I4WYCHWruoJQ3H6r1s7B+rjiTQ5kDSU7a7MVv0KlgR8C38AOPq3y2aSdyDflC0rSOuczAFTUzVq4QMgp952PCCNp1hvCoG+D8Vcg6SGk/FqvAB0WIEYQ/7IgAjRZEWaPjZ9oBVCpLg3gt5qP1jKatJnze9k6lJK5uW8bjr/kKLJ3NsoQFBWtC7zHeR3VXQICsElL1En995XHXtt7E/lqcVCUDcJXJQFx44PtGwr4oY5tYw0Z0tuKhgPJe9lts6DRvwUlncTQQW4iEOL5N885Jm3OHu9Htu3PksAMXrqLfAg83go7MIW7oTMwxVwzcNhUAR4umdNmsUymCNbvB//hZBUAsxeiDWvBVSiUE1m7IkeJiE5A37Lzsm5eALWCgYpU/JL+Xa8QF/tdBXvM5aF/9EOedUcj+jJqeVnH6R78XLoLyg27eJ9j2vVwFiJ7Lt5QCu0lvfc52PXX+ZyZXfGLWLzQcdKl+Utk/d+7cvvNvaNInXPTRlqV1kEo6+/bhZ5e0unIe8+ERF4OtmJeo31Yc3s8mqMRhKLHETQLeC+txqsHeBXu8EKXVAJDwPkt+4e1i+JDIqOrpy/awqm7YIDOb6S3raC9mtIOgxgvcdHCxIOfe1ZXxNm8+7u3lVCv4CpIQt3KwaJhRVEMIC7Pz2BFWrrCEuKDNjVYXATcahEp2hKmHmtDrYxzPiXikqSUFeFHGyZFFvEr6Xd29tMu157bxK+ObwEjg/tMP7xS/PbFS59fkh4Ts8hz0Yk3wyRm+1M/Ei90+YO94ftBuBO+rh+KkEgkepnxmm++W7fqRbzW0b/yKMhEm8AFRWDqItSiAIN0KA5iBwW5kiZPW/Ewi1K+RoIKRWdqsvg9jX+0jNhvtJQrTJXRawfbNyAmtnwY1PBt5N6+atuK3RYMvND9ikaL/pOG4H+hmgFZzN5b5xIn6qg7VohRNjpzWWNxnx9xbMvgZK4zertvCaQwbreJ8iGaxxTy6DeAG2I1054h2q4o6v00elH+q4rW1ef0FbtDaHaw4J1ar649w/2skx2qwpG29sQM/tjZwJe+3Gf+8zi1DtBB3U5BKVUF0X74kiH0tlZrObZF0wQsjI7TvRuFAfFkbLutC5RMz0Iitf8Ae7Jwor2MWuFw8JndWa45/AQSLrot3GKDGz3lbpn8hJLK4N0B54EVCIyeIl+8eMZiOlglAqRz/4O37pALwSglZ6Y8fWjm3q4u+XXlJKH4QhVoGxX/qeCRWO1ex0DjqK1CyfPVAKkK5QqhEFEqvbKESagyhvrli673y2cDg3Af4u4gOuN3/Dljbu9cuSH4t4IbJQ17cp1r14/G+B8SLNjNWZfgvlxOZdjkOPOsfCT02umY3rhV1SdoL2BXSMtb1pXXMuxZn+JGD3lW5AQOpdxuJObqFR+Rr8Y4j84sHYGSS2C+5b8hvHH4sIQ8AQQPtWYLVOJMcZ6TY3uDClFxqcEX1TTixAwhdMzJLacPCkVHrQIExF5+ss5aoQE+k0YwuN38Znfw0lcHsUgGycBySrsXE6UC11SPIZVMeLa7KI0Vb65GA7z4MTsHZKnZwz9J2keex5wR5nCNN2QUHQP0YO4jpscqXIp0H48Fy7eHBULycW7W5AI47ciKpBiHfSnpOrdROZ1VqBo8RA1wVn4hyKAD6rKi6gmXyolvf+3Eq11MZCR6tYYATf/LiLh9/RA+I7Pnsb85cU92j11UbDpcmcasAJJns6/eZEQK3mcuqWInhIiqNZYUGzrWIPePIbo5XSm0PkoVFgx2UP1ovd36dq4mUQl8Tl4qZLd2xIvxHvsB/ttWaEv1IEZvDlFcxXVMCSZ17nn+xp7QmpYmapF5aetorKAykTnBFYR7gn8AP7yfYyrYQvuI4PBSQCoze+o0E0U+eiJWYs3VGXQz1KbZzJllluVCyYoyltgrdxrJKI+bhJD/jKEcgM/eperpJAJykYyuRxAceBCVOtKuMUFGJXzKhBjCiORDLtQIM0T0LIw/IK3VYa6r+nqd9ShTHt0SHGDZgD64zTfs08EqO8x+b/VrrvTJoAi8DDcvbikdXrdwQ41gH/nDZOYFP7k9sbL4k3+WUju7MwXUSCa1Ip3BKtLXmgnb1gKmzjrWRBBiAb6yZkGy6LvanHQoEruO3MJzrLuPyzwBZFuIC76y0JgQh6P2mlvnY++tCGGiMlJs/VuOXACwBlpjOzp5zMn1pyhRpJKz1rfC4N/3lYVQ8eNJoomqJo984c4WKYCukaSfDFKTx29iH3kHAex/29XcpKB32rz/b027BXHddsM07yOSeW96TrvOpWkkFW8XJvVrDTbhGSHohrJxf0K1KAKlxA9IQ9xkSr1c5BjSSooSydfOMmCzr9pvnXtEFvmAI2O+U8a7vlClRIZkLE+zQWVdvlcItv9gAAAAAAAAA==");
+  --starter-photo: url("https://labottegadimichele.com/wp-content/uploads/2020/03/ensalada-480x448.jpg");
+}
+
+/* ----- Original restaurant identity ----- */
+.brand-mark {
+  width: 48px !important;
+  height: 48px !important;
+  flex: 0 0 48px;
+  border: 0 !important;
+  border-radius: 50%;
+  font-size: 0 !important;
+  color: transparent !important;
+  background-image: var(--bottega-logo);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+.brand { gap: 10px; }
+.brand-copy strong { font-size: 21px; }
+.hero-content::before {
+  content: "";
+  display: block;
+  width: 92px;
+  height: 92px;
+  margin: 0 0 14px -4px;
+  background-image: var(--bottega-logo);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  filter: drop-shadow(0 9px 18px rgba(0,0,0,.22));
+}
+
+/* ----- Desktop hero: less oversized, more editorial ----- */
+@media (min-width: 1051px) {
+  .hero {
+    min-height: 700px;
+    height: min(900px, 100svh);
+  }
+  .hero-bg {
+    object-position: center 55%;
+  }
+  .hero-shade {
+    background:
+      linear-gradient(90deg, rgba(7,24,20,.82) 0%, rgba(7,24,20,.56) 31%, rgba(7,24,20,.19) 66%, rgba(7,24,20,.08) 100%),
+      linear-gradient(0deg, rgba(7,24,20,.55) 0%, transparent 50%);
+  }
+  .hero-content {
+    left: max(6vw, 64px);
+    top: 46%;
+    transform: translateY(-42%);
+    width: min(610px, 43vw);
+  }
+  .hero h1 {
+    font-size: clamp(74px, 6.7vw, 112px);
+    line-height: .88;
+    margin-bottom: 20px;
+  }
+  .hero-copy {
+    max-width: 520px;
+    font-size: 15px;
+    line-height: 1.65;
+  }
+  .hero-actions {
+    margin-top: 26px;
+  }
+  .hero-bottom {
+    left: max(6vw, 64px);
+    right: max(6vw, 64px);
+  }
+}
+
+/* ----- Use a genuine La Bottega salad photograph for Entrantes ----- */
+.visual-cat[data-visual-cat="starters"] {
+  background-image: var(--starter-photo);
+  background-size: cover;
+  background-position: center;
+}
+.visual-cat[data-visual-cat="starters"] > img {
+  opacity: 0;
+}
+
+/* When the complete desktop menu is on Entrantes, replace the generic service image too. */
+.menu-reader:has(#categoryTabs button[data-cat="starters"].active) .menu-group-visual,
+.menu-reader:has(#categoryTabs button[data-cat="all"].active) .menu-group:first-child .menu-group-visual {
+  background-image: var(--starter-photo);
+  background-size: cover;
+  background-position: center;
+}
+.menu-reader:has(#categoryTabs button[data-cat="starters"].active) .menu-group-visual > img,
+.menu-reader:has(#categoryTabs button[data-cat="all"].active) .menu-group:first-child .menu-group-visual > img {
+  opacity: 0;
+}
+
+/* ----- Full menu: food photos sell above, typography sells here ----- */
+.menu-item-thumb {
+  display: none !important;
+}
+.menu-item.featured-item {
+  grid-template-columns: 1fr auto !important;
+}
+
+/* ----- Better search field ----- */
+.menu-search {
+  border-bottom: 0;
+  height: 50px;
+  padding: 0 14px;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: #fff;
+}
+.menu-search span {
+  font-size: 20px;
+  opacity: .72;
+}
+.menu-search input {
+  min-width: 0;
+}
+.menu-search input::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+/* ----- Mobile menu: compact visual index + clean restaurant-card menu ----- */
+@media (max-width: 720px) {
+  html {
+    -webkit-text-size-adjust: 100%;
+  }
+
+  .brand-mark {
+    width: 42px !important;
+    height: 42px !important;
+    flex-basis: 42px;
+  }
+  .brand-copy strong {
+    font-size: 18px;
+  }
+  .brand-copy small {
+    font-size: 7px;
+  }
+
+  .hero-content::before {
+    width: 70px;
+    height: 70px;
+    margin: 0 0 10px -2px;
+  }
+
+  /* iOS Safari zooms form fields below 16px. */
+  .menu-search input,
+  .modal-card input,
+  .modal-card select,
+  .modal-card textarea {
+    font-size: 16px !important;
+  }
+
+  .menu-search {
+    height: 52px;
+    margin-top: 22px;
+    border: 1px solid rgba(19,32,29,.14);
+    border-radius: 14px;
+    padding: 0 15px;
+    box-shadow: 0 8px 24px rgba(18,55,47,.05);
+  }
+
+  /* The big photo cards become an Instagram-story-like category navigator. */
+  .visual-category-rail {
+    gap: 13px;
+    padding: 28px 14px 26px;
+    align-items: flex-start;
+    scroll-padding-inline: 14px;
+  }
+  .visual-cat {
+    flex: 0 0 78px;
+    width: 78px;
+    height: 105px;
+    overflow: visible;
+    border-radius: 0;
+    background: transparent;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    scroll-snap-align: start;
+  }
+  .visual-cat > img {
+    position: relative;
+    inset: auto;
+    width: 68px;
+    height: 68px;
+    flex: 0 0 68px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 2px solid rgba(255,255,255,.28);
+    padding: 3px;
+    transition: transform .2s ease, border-color .2s ease;
+    opacity: 1;
+  }
+  .visual-cat[data-visual-cat="starters"] {
+    background-image: none;
+    position: relative;
+  }
+  .visual-cat[data-visual-cat="starters"]::before {
+    content: "";
+    position: absolute;
+    z-index: 1;
+    top: 3px;
+    left: 8px;
+    width: 62px;
+    height: 62px;
+    border-radius: 50%;
+    background-image: var(--starter-photo);
+    background-size: cover;
+    background-position: center;
+    pointer-events: none;
+  }
+  .visual-cat[data-visual-cat="starters"] > img {
+    opacity: 0;
+  }
+  .visual-cat::after {
+    display: none;
+  }
+  .visual-cat:hover img {
+    transform: none;
+  }
+  .visual-cat.active {
+    outline: 0;
+  }
+  .visual-cat.active > img {
+    border-color: #e8c995;
+    transform: scale(1.04);
+  }
+  .visual-cat[data-visual-cat="starters"].active::before {
+    box-shadow: 0 0 0 3px #12372f, 0 0 0 5px #e8c995;
+  }
+  .visual-cat-copy {
+    position: static;
+    width: 100%;
+    margin-top: 7px;
+    text-align: center;
+    line-height: 1.05;
+  }
+  .visual-cat-copy small,
+  .visual-cat-copy span {
+    display: none;
+  }
+  .visual-cat-copy strong {
+    display: block;
+    margin: 0;
+    font-family: var(--sans);
+    font-size: 10px;
+    line-height: 1.18;
+    font-weight: 700;
+    letter-spacing: -.01em;
+  }
+
+  /* Keep the chef's picks photographic, but stop them taking over the phone. */
+  .signature-dishes {
+    padding: 34px 0 58px;
+  }
+  .signature-title {
+    padding-top: 23px;
+    margin-bottom: 22px;
+  }
+  .signature-title h3 {
+    font-size: 35px;
+    line-height: .96;
+  }
+  .signature-grid {
+    gap: 10px;
+  }
+  .signature-card,
+  .signature-card.large,
+  .signature-card:nth-child(2),
+  .signature-card:nth-child(3) {
+    flex: 0 0 74vw;
+    height: 315px;
+    border-radius: 8px;
+  }
+  .signature-card > div {
+    left: 18px;
+    right: 18px;
+    bottom: 17px;
+  }
+  .signature-card h4 {
+    font-size: 25px;
+  }
+
+  .menu-reader {
+    padding-top: 54px;
+  }
+  .menu-reader-head h3 {
+    font-size: 41px;
+    line-height: .95;
+  }
+
+  /* Sticky category navigation feels closer to a native restaurant app. */
+  .category-tabs {
+    position: sticky;
+    top: 70px;
+    z-index: 30;
+    margin: 22px -14px 20px;
+    padding: 10px 14px;
+    background: rgba(251,248,242,.96);
+    backdrop-filter: blur(14px);
+    -webkit-backdrop-filter: blur(14px);
+    border-top: 1px solid rgba(19,32,29,.06);
+    border-bottom: 1px solid rgba(19,32,29,.08);
+  }
+  .category-tabs button {
+    padding: 10px 14px;
+    background: #fff;
+    box-shadow: 0 3px 12px rgba(18,55,47,.04);
+  }
+
+  /* No large category photo inside the actual phone menu.
+     Instead, each section gets an elegant editorial heading. */
+  .menu-group {
+    display: block;
+    padding: 0 0 32px;
+    margin-bottom: 34px;
+  }
+  .menu-group-visual {
+    position: relative;
+    top: auto;
+    height: auto;
+    min-height: 0;
+    overflow: visible;
+    color: var(--ink);
+    background: transparent !important;
+    border-radius: 0;
+    padding: 0 0 15px;
+    margin-bottom: 0;
+    border-bottom: 1px solid var(--line);
+  }
+  .menu-group-visual > img,
+  .menu-group-visual::after {
+    display: none !important;
+  }
+  .menu-group-visual > div {
+    position: static;
+  }
+  .menu-group-visual small {
+    display: block;
+    color: var(--rust);
+    opacity: 1;
+    font-size: 8px;
+    font-weight: 700;
+    letter-spacing: .16em;
+  }
+  .menu-group-visual h3 {
+    margin: 4px 0 4px;
+    color: var(--ink);
+    font-size: 35px;
+    line-height: .94;
+  }
+  .menu-group-visual p {
+    color: var(--muted);
+    opacity: 1;
+    font-size: 10px;
+    margin: 0;
+  }
+
+  .menu-items {
+    display: block;
+  }
+  .menu-item,
+  .menu-item.featured-item {
+    grid-template-columns: minmax(0,1fr) auto !important;
+    gap: 14px;
+    min-height: 0;
+    padding: 18px 0 17px;
+    align-items: start;
+  }
+  .menu-item:first-child {
+    border-top: 0;
+  }
+  .menu-item h4 {
+    font-size: 22px;
+    line-height: 1.03;
+    margin-bottom: 7px;
+  }
+  .menu-item p {
+    max-width: 95%;
+    font-size: 10px;
+    line-height: 1.55;
+  }
+  .menu-price {
+    padding-top: 2px;
+    font-size: 11px;
+  }
+}
+
+/* Slightly calmer typography on very small iPhones. */
+@media (max-width: 390px) {
+  .visual-cat {
+    flex-basis: 74px;
+    width: 74px;
+  }
+  .visual-cat > img {
+    width: 64px;
+    height: 64px;
+    flex-basis: 64px;
+  }
+  .visual-cat[data-visual-cat="starters"]::before {
+    left: 8px;
+    width: 58px;
+    height: 58px;
+  }
+  .menu-item h4 {
+    font-size: 20px;
+  }
+}
