@@ -14,14 +14,13 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;1,500;1,600&family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
-  <link rel="stylesheet" href="refinements.css" />
 </head>
 <body>
   <a class="skip-link" href="#main">Saltar al contenido</a>
 
   <header class="site-header" id="top">
     <a class="brand" href="#top" aria-label="La Bottega di Michele">
-      <span class="brand-mark">LB</span>
+      <img class="brand-mark" src="assets/images/logo.png" alt="" aria-hidden="true" />
       <span class="brand-copy"><strong>La Bottega</strong><small>di Michele · Palma</small></span>
     </a>
 
@@ -33,7 +32,11 @@
     </nav>
 
     <div class="header-actions">
-      <button class="lang-switch" id="langSwitch" type="button" aria-label="Cambiar idioma">EN</button>
+      <div class="language-picker" aria-label="Idioma / Language">
+        <button class="lang-option lang-es" type="button" aria-label="Español" onclick="if(document.documentElement.lang!=='es')document.getElementById('langSwitch').click()"><span class="lang-flag" aria-hidden="true">🇪🇸</span><span>ES</span></button>
+        <button class="lang-option lang-en" type="button" aria-label="English" onclick="if(document.documentElement.lang!=='en')document.getElementById('langSwitch').click()"><span class="lang-flag" aria-hidden="true">🇬🇧</span><span>EN</span></button>
+        <button class="lang-switch lang-switch-engine" id="langSwitch" type="button" tabindex="-1" aria-hidden="true">EN</button>
+      </div>
       <button class="whatsapp-header reserve-trigger" type="button">
         <img src="assets/images/whatsapp.svg" alt="" aria-hidden="true" />
         <span data-i18n="nav.reserve">Reservar</span>
@@ -59,7 +62,8 @@
     <section class="hero">
       <img class="hero-bg" src="assets/images/terrace.jpg" alt="Terraza de La Bottega di Michele en Palma" />
       <div class="hero-shade"></div>
-      <div class="hero-content reveal">
+      <div class="hero-content">
+        <img class="hero-logo" src="assets/images/logo.png" alt="La Bottega di Michele" />
         <p class="eyebrow light" data-i18n="hero.eyebrow">Pescara · Mallorca · Desde 1918</p>
         <h1 data-i18n="hero.title">Cocina italiana<br><em>con memoria.</em></h1>
         <p class="hero-copy" data-i18n="hero.copy">Cuatro generaciones, producto fresco y una cocina hecha al momento. Una historia italiana que hoy se sirve en Palma.</p>
@@ -72,7 +76,7 @@
         </div>
       </div>
 
-      <div class="hero-bottom reveal">
+      <div class="hero-bottom">
         <div class="hero-fact"><span data-i18n="hero.today">Hoy</span><strong id="todayHours">13:00 — 22:00</strong></div>
         <div class="hero-fact"><span data-i18n="hero.addressLabel">Santa Catalina · Palma</span><strong>Carrer de la Fàbrica, 17</strong></div>
         <a class="hero-directions" href="https://maps.app.goo.gl/eV2x4zK1jKoQ8Tqt5" target="_blank" rel="noopener">
@@ -110,26 +114,11 @@
         </div>
 
         <div class="timeline reveal">
-          <article>
-            <span class="timeline-year">1918</span>
-            <div><h3 data-i18n="story.t1title">Todo empieza con Nonna Graziela</h3><p data-i18n="story.t1body">En Pescara, en la región de Abruzzo, abre el primer restaurante familiar. Una cocina basada en producto, oficio y hospitalidad.</p></div>
-          </article>
-          <article>
-            <span class="timeline-year" data-i18n="story.t2year">Después</span>
-            <div><h3 data-i18n="story.t2title">El oficio pasa de generación en generación</h3><p data-i18n="story.t2body">Nono Don Donato Simone continúa la actividad y, más tarde, Antonieta mantiene viva la tradición familiar.</p></div>
-          </article>
-          <article>
-            <span class="timeline-year">1978</span>
-            <div><h3 data-i18n="story.t3title">Michele recoge el legado</h3><p data-i18n="story.t3body">La tercera generación convierte la tradición en una cocina de autor: recetas reconocibles, creatividad y respeto absoluto por la materia prima.</p></div>
-          </article>
-          <article>
-            <span class="timeline-year">1998</span>
-            <div><h3 data-i18n="story.t4title">De Abruzzo a Mallorca</h3><p data-i18n="story.t4body">Michele lleva ese conocimiento a Palma y abre La Bottega di Michele, combinando raíces italianas con el producto mediterráneo de la isla.</p></div>
-          </article>
-          <article>
-            <span class="timeline-year" data-i18n="story.t5year">Hoy</span>
-            <div><h3 data-i18n="story.t5title">La historia continúa</h3><p data-i18n="story.t5body">Manuel Caporale representa la siguiente generación. La familia sigue evolucionando, pero la promesa permanece: cocinar al momento, cuidar el producto y hacer que cada cliente se sienta en casa.</p></div>
-          </article>
+          <article><span class="timeline-year">1918</span><div><h3 data-i18n="story.t1title">Todo empieza con Nonna Graziela</h3><p data-i18n="story.t1body">En Pescara, en la región de Abruzzo, abre el primer restaurante familiar. Una cocina basada en producto, oficio y hospitalidad.</p></div></article>
+          <article><span class="timeline-year" data-i18n="story.t2year">Después</span><div><h3 data-i18n="story.t2title">El oficio pasa de generación en generación</h3><p data-i18n="story.t2body">Nono Don Donato Simone continúa la actividad y, más tarde, Antonieta mantiene viva la tradición familiar.</p></div></article>
+          <article><span class="timeline-year">1978</span><div><h3 data-i18n="story.t3title">Michele recoge el legado</h3><p data-i18n="story.t3body">La tercera generación convierte la tradición en una cocina de autor: recetas reconocibles, creatividad y respeto absoluto por la materia prima.</p></div></article>
+          <article><span class="timeline-year">1998</span><div><h3 data-i18n="story.t4title">De Abruzzo a Mallorca</h3><p data-i18n="story.t4body">Michele lleva ese conocimiento a Palma y abre La Bottega di Michele, combinando raíces italianas con el producto mediterráneo de la isla.</p></div></article>
+          <article><span class="timeline-year" data-i18n="story.t5year">Hoy</span><div><h3 data-i18n="story.t5title">La historia continúa</h3><p data-i18n="story.t5body">Manuel Caporale representa la siguiente generación. La familia sigue evolucionando, pero la promesa permanece: cocinar al momento, cuidar el producto y hacer que cada cliente se sienta en casa.</p></div></article>
         </div>
       </div>
 
@@ -153,27 +142,6 @@
       </div>
 
       <div class="visual-category-rail" id="visualCategoryRail" aria-label="Categorías de la carta"></div>
-
-      <div class="signature-dishes section reveal">
-        <div class="signature-title">
-          <span data-i18n="menu.signaturesKicker">Sugerencias de Michele</span>
-          <h3 data-i18n="menu.signaturesTitle">Platos que cuentan la casa</h3>
-        </div>
-        <div class="signature-grid">
-          <article class="signature-card large">
-            <img src="assets/images/lobster-pasta.jpg" alt="Spaghetti con bogavante" />
-            <div><span data-i18n="menu.casserole">A la cazuela</span><h4>Spaghetti con Bogavante</h4><p data-i18n="featured.lobster">Preparado en cazuela de barro, para compartir y disfrutar sin prisa.</p><b>S.P.M.</b></div>
-          </article>
-          <article class="signature-card">
-            <img src="assets/images/parmesan-wheel.jpeg" alt="Tagliatelle en rueda de Parmigiano Reggiano" />
-            <div><span data-i18n="menu.pasta">Pasta</span><h4>Tagliatelle · Parmigiano 30 meses</h4><b>22€</b></div>
-          </article>
-          <article class="signature-card">
-            <img src="assets/images/panna-cotta.jpg" alt="Panna Cotta" />
-            <div><span data-i18n="menu.desserts">Postres</span><h4>Panna Cotta</h4><b>7,50€</b></div>
-          </article>
-        </div>
-      </div>
 
       <div class="menu-reader section">
         <div class="menu-reader-head reveal">
@@ -253,22 +221,15 @@
       <div class="footer-brand"><strong>La Bottega</strong><span>di Michele</span><small data-i18n="footer.tagline">Una familia de restauradores desde 1918.</small></div>
       <div class="footer-nav"><a href="#heritage" data-i18n="nav.story">Historia</a><a href="#menu" data-i18n="nav.menu">Carta</a><button class="reserve-trigger" type="button" data-i18n="nav.reserve">Reservar</button><a href="#visit" data-i18n="nav.visit">Visítanos</a></div>
       <div class="socials" aria-label="Redes sociales">
-        <a href="https://www.instagram.com/labottega.dimichele/" target="_blank" rel="noopener" aria-label="Instagram">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.25"/><circle cx="17.5" cy="6.5" r="1" class="fill-dot"/></svg>
-        </a>
-        <a href="http://www.facebook.com/pages/La-Bottega-de-Michele/155160061192254" target="_blank" rel="noopener" aria-label="Facebook">
-          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 8H17V4.5h-2.7c-3.1 0-4.8 1.8-4.8 5v2H7v3.5h2.5V21h4v-6H17l.5-3.5h-4V9.7c0-1.1.3-1.7 1-1.7Z"/></svg>
-        </a>
+        <a href="https://www.instagram.com/labottega.dimichele/" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4.25"/><circle cx="17.5" cy="6.5" r="1" class="fill-dot"/></svg></a>
+        <a href="http://www.facebook.com/pages/La-Bottega-de-Michele/155160061192254" target="_blank" rel="noopener" aria-label="Facebook"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14.5 8H17V4.5h-2.7c-3.1 0-4.8 1.8-4.8 5v2H7v3.5h2.5V21h4v-6H17l.5-3.5h-4V9.7c0-1.1.3-1.7 1-1.7Z"/></svg></a>
         <button class="reserve-trigger social-wa" type="button" aria-label="WhatsApp"><img src="assets/images/whatsapp.svg" alt="" /></button>
       </div>
     </div>
     <div class="footer-bottom"><span>© 2026 La Bottega di Michele</span><a href="https://maps.app.goo.gl/eV2x4zK1jKoQ8Tqt5" target="_blank" rel="noopener">Carrer de la Fàbrica, 17 · Palma</a></div>
   </footer>
 
-  <button class="floating-whatsapp reserve-trigger" type="button" aria-label="Reservar por WhatsApp">
-    <img src="assets/images/whatsapp.svg" alt="WhatsApp" />
-    <span data-i18n="floating.whatsapp">Reservar por WhatsApp</span>
-  </button>
+  <button class="floating-whatsapp reserve-trigger" type="button" aria-label="Reservar por WhatsApp"><img src="assets/images/whatsapp.svg" alt="WhatsApp" /><span data-i18n="floating.whatsapp">Reservar por WhatsApp</span></button>
 
   <div class="mobile-action-bar" aria-label="Acciones rápidas">
     <a href="#menu"><span class="action-icon">☰</span><small data-i18n="mobile.menu">Carta</small></a>
