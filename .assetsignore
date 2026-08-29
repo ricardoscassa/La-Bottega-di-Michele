@@ -1,0 +1,7 @@
+.git
+.github
+.gitignore
+wrangler.jsonc
+.assetsignore
+README*
+DEPLOY-CLOUDFLARE*
